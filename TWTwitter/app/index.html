@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+<head>
+    <title></title>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="scripts/styles.css" rel="stylesheet" />
+</head>
+<body ng-controller="TweetCtrl">
+
+
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">TWTwitter</a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                        </ul>
+                        <form class="navbar-form navbar-right">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Username">
+                                <input type="text" class="form-control" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn btn-default">Login</button>
+                        </form>
+
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </div>
+        </nav>
+        <div class="container">
+
+            <div class="col-lg-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">@{{userId}}</div>
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="tweet in UserTweets">{{tweet.Text}}<span class="text-info"> <br />-{{tweet.UserId}}</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="col-lg-12 well">
+                    <div class="form-group">
+                        <select class="form-control" ng-model="DirectMessageTarget" ng-options="user.Id for user in Users"></select>
+                    </div>
+                    <div class="form-group"><input type="text" class="form-control" placeholder="Subject" ng-model="DirectMessageSubject"></div>
+
+                    <textarea class="form-control" ng-model="DirectMessageText" placeholder="Message..."></textarea>
+                    <button class="btn btn-primary form-control" ng-click="sendDM()">Send Direct Message</button>
+                </div>
+                <div class="col-lg-12 well danger">
+                    <div class="list-group tweet-form-padding">
+                        <a  class="list-group-item" ng-class="{active:hover}" ng-click="hideEmail = !hideEmail"
+                           ng-mouseenter="hover=true" ng-mouseleave="hover=false" ng-repeat="message in Messages">
+                            <h4 class="list-group-item-heading">{{message.Subject}}</h4>
+                            <p class="list-group-item-text" ng-show="hideEmail">{{message.Text}}</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="col-lg-12">
+                    <form class="form-inline well fix-overflow" role="form">
+
+                        <div class="form-group col-sm-10 tweet-form-padding"><input type="Text" ng-model="tweet" class="form-control" id="tweet" placeholder="Send a Tweet..."></div>
+                        <div class="form-group col-sm-2 tweet-form-padding"><button type="submit" class="btn btn-default form-control pull-right" ng-click="postTweet()">Tweet</button></div>
+
+                    </form>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">My Tweets</div>
+                        <ul class="list-group">
+                            <li class="list-group-item" ng-repeat="tweet in Tweets"><span class="text-info">@{{tweet.TargetId}} </span>{{tweet.Text}}</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="col-lg-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Following</div>
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="user in Following"><span class="text-info">{{user.Id}}</span></li>
+                    </ul>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">Followers</div>
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="follower in Followers"><span class="text-info">{{follower.Id}}</span></li>
+                    </ul>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">Other Tweeters</div>
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="user in Users"><span class="text-info">{{user.Id}}</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    {{test1}}<br />
+    {{test2}}
+    <script src="../Scripts/jquery-2.1.1.min.js"></script>
+    <script src="../Scripts/angular.min.js"></script>
+    <script src="../Scripts/angular-route.min.js"></script>
+    <script src="../Scripts/angular-resource.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

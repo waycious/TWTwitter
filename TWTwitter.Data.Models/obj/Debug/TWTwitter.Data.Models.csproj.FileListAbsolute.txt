@@ -1,0 +1,14 @@
+d:\projects\TWTwitter\TWTwitter.Data.Models\obj\Debug\TWTwitter.Data.Models.csprojResolveAssemblyReference.cache
+d:\projects\TWTwitter\TWTwitter.Data.Models\bin\Debug\TWTwitter.Data.Models.dll.config
+d:\projects\TWTwitter\TWTwitter.Data.Models\bin\Debug\TWTwitter.Data.Models.dll
+d:\projects\TWTwitter\TWTwitter.Data.Models\bin\Debug\TWTwitter.Data.Models.pdb
+d:\projects\TWTwitter\TWTwitter.Data.Models\bin\Debug\EntityFramework.dll
+d:\projects\TWTwitter\TWTwitter.Data.Models\bin\Debug\EntityFramework.SqlServer.dll
+d:\projects\TWTwitter\TWTwitter.Data.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+d:\projects\TWTwitter\TWTwitter.Data.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+d:\projects\TWTwitter\TWTwitter.Data.Models\bin\Debug\EntityFramework.xml
+d:\projects\TWTwitter\TWTwitter.Data.Models\bin\Debug\EntityFramework.SqlServer.xml
+d:\projects\TWTwitter\TWTwitter.Data.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+d:\projects\TWTwitter\TWTwitter.Data.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+d:\projects\TWTwitter\TWTwitter.Data.Models\obj\Debug\TWTwitter.Data.Models.dll
+d:\projects\TWTwitter\TWTwitter.Data.Models\obj\Debug\TWTwitter.Data.Models.pdb
